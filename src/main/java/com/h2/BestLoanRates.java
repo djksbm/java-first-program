@@ -10,7 +10,7 @@ public class BestLoanRates {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter yor name");
+        System.out.println("Enter your name");
         String name = scanner.nextLine();
         System.out.println("Hello " + name);
         System.out.println("Enter the loan term (in years)");
@@ -22,7 +22,7 @@ public class BestLoanRates {
         scanner.close();
     }
     public static float getRates(int loanTermInYears){
-        return bestRates.keySet().contains(loanTermInYears) ?
+        return bestRates.containsKey(loanTermInYears) ?
                 bestRates.get(loanTermInYears) :
                 0.0f;
     }
