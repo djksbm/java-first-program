@@ -22,8 +22,6 @@ public class BestLoanRates {
         scanner.close();
     }
     public static float getRates(int loanTermInYears){
-        return bestRates.containsKey(loanTermInYears) ?
-                bestRates.get(loanTermInYears) :
-                0.0f;
+        return bestRates.getOrDefault(loanTermInYears, 0.0f);
     }
 }
